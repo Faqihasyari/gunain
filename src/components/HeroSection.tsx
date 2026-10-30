@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Search, MapPin, Package, Building2, Wrench } from "lucide-react";
+import { Search, MapPin, Package, Building2 } from "lucide-react";
 import { ShieldCheck, CreditCard, UserCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -19,13 +19,6 @@ const categories = [
     icon: Building2,
     placeholder: "Gudang transit, studio foto ...",
     suggestions: ["Gudang Mini", "Studio Foto", "Ruko Pop-up", "Ruang Meeting"],
-  },
-  {
-    id: "jasa",
-    label: "Jasa Harian",
-    icon: Wrench,
-    placeholder: "Asisten belanja, kru acara ...",
-    suggestions: ["Asisten Belanja", "Kru Setting Acara", "Antar-Jemput", "Kurir Harian"],
   },
 ] as const;
 

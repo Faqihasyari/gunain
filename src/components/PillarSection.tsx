@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Camera, Building2, Users, ChevronRight } from "lucide-react";
+import { Camera, Building2, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const pillars = [
@@ -43,25 +43,6 @@ const pillars = [
       },
     ],
   },
-  {
-    badge: "Jasa Harian",
-    badgeColor: "bg-accent text-white",
-    title: "Bantuan Harian Terpercaya, Tarif Transparan",
-    description:
-      "Kurir terverifikasi, asisten belanja, kru setting acara, dan tenaga bantuan logistik. Semua telah melalui verifikasi identitas resmi.",
-    highlights: ["Antar-Jemput", "Asisten Belanja", "Kru Acara", "Kurir Harian"],
-    icon: Users,
-    images: [
-      {
-        src: "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=600&q=80",
-        alt: "Petugas layanan serah terima paket",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80",
-        alt: "Kolaborasi penyedia jasa profesional",
-      },
-    ],
-  },
 ];
 
 const cardVariants = {
@@ -76,22 +57,22 @@ const cardVariants = {
 export default function PillarSection() {
   return (
     <section id="kategori" className="py-20 md:py-28 bg-white">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="mx-auto max-w-6xl px-5 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="text-xs font-bold uppercase tracking-wider text-primary-deep mb-3">
-            Tiga Pilar Layanan
+            Dua Pilar Utama Layanan
           </p>
           <h2 className="text-3xl md:text-[38px] font-bold text-title leading-snug">
-            Satu Platform, Segala Kebutuhan Sewa
+            Solusi Sewa Barang &amp; Properti Terbaik
           </h2>
           <p className="mt-4 text-body text-lg">
-            Temukan barang, ruang, atau jasa yang Anda butuhkan dari mitra terverifikasi di seluruh Indonesia.
+            Temukan barang atau ruang yang Anda butuhkan dari mitra terverifikasi di seluruh Indonesia.
           </p>
         </div>
 
-        {/* Pillar grid: staggered layout for visual rhythm */}
-        <div className="grid gap-8 lg:grid-cols-3">
+        {/* Pillar grid: 2 columns */}
+        <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
           {pillars.map((pillar, idx) => {
             const Icon = pillar.icon;
             return (
@@ -102,11 +83,9 @@ export default function PillarSection() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-60px" }}
                 variants={cardVariants}
-                className={`group rounded-2xl border border-surface-border bg-surface-card
+                className="group rounded-2xl border border-surface-border bg-surface-card
                             overflow-hidden hover:shadow-xl hover:shadow-primary/5
-                            transition-shadow duration-300 ${
-                              idx === 1 ? "lg:translate-y-6" : ""
-                            }`}
+                            transition-shadow duration-300 flex flex-col justify-between"
               >
                 {/* Dual image header */}
                 <div className="grid grid-cols-2 gap-0.5 bg-surface-border">
@@ -117,43 +96,45 @@ export default function PillarSection() {
                         alt={img.alt}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        sizes="(max-width: 768px) 50vw, 20vw"
+                        sizes="(max-width: 768px) 50vw, 25vw"
                       />
                     </div>
                   ))}
                 </div>
 
-                <div className="p-6">
-                  {/* Badge */}
-                  <span
-                    className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1 text-xs font-bold ${pillar.badgeColor}`}
-                  >
-                    <Icon size={14} />
-                    {pillar.badge}
-                  </span>
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    {/* Badge */}
+                    <span
+                      className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1 text-xs font-bold ${pillar.badgeColor}`}
+                    >
+                      <Icon size={14} />
+                      {pillar.badge}
+                    </span>
 
-                  <h3 className="mt-4 text-xl font-bold text-title leading-snug">
-                    {pillar.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-body leading-relaxed">
-                    {pillar.description}
-                  </p>
+                    <h3 className="mt-4 text-xl font-bold text-title leading-snug">
+                      {pillar.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-body leading-relaxed">
+                      {pillar.description}
+                    </p>
 
-                  {/* Highlights */}
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {pillar.highlights.map((h) => (
-                      <span
-                        key={h}
-                        className="text-xs px-2.5 py-1 rounded-md bg-primary-subtle text-title font-medium"
-                      >
-                        {h}
-                      </span>
-                    ))}
+                    {/* Highlights */}
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {pillar.highlights.map((h) => (
+                        <span
+                          key={h}
+                          className="text-xs px-2.5 py-1 rounded-md bg-primary-subtle text-title font-medium"
+                        >
+                          {h}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
                   <a
                     href="#hero-search"
-                    className="mt-5 inline-flex items-center gap-1 text-sm font-semibold
+                    className="mt-6 inline-flex items-center gap-1 text-sm font-semibold
                                text-primary-deep hover:text-primary-dark transition-colors"
                   >
                     Jelajahi Kategori
