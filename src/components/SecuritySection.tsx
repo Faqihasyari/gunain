@@ -28,21 +28,21 @@ const shieldFeatures = [
 const flexiFeatures = [
   {
     icon: CreditCard,
-    title: "Cicilan Tanpa Beban di Muka",
+    title: "Sewa Sekarang, Bayar Nanti",
     description:
-      "Penyewa dapat memilih skema pembayaran bertahap melalui penyedia pembiayaan berizin OJK tanpa harus membayar penuh di awal.",
+      "Penyewa dapat menikmati fleksibilitas pembayaran bertahap atau cicilan ringan tanpa harus membayar penuh di awal.",
   },
   {
     icon: Banknote,
     title: "Mitra Dibayar 100% di Depan",
     description:
-      "Meski penyewa mencicil, pemilik aset tetap menerima pembayaran penuh saat transaksi dikonfirmasi. Risiko kredit ditanggung penyedia BNPL.",
+      "Meski penyewa mencicil atau bayar nanti, pemilik aset tetap menerima pembayaran penuh saat transaksi dikonfirmasi.",
   },
   {
     icon: CheckCircle2,
-    title: "Terdaftar dan Diawasi OJK",
+    title: "Transaksi Fleksibel & Terjamin",
     description:
-      "Seluruh mitra pembiayaan GUNAIN telah terdaftar resmi dan diawasi oleh Otoritas Jasa Keuangan Republik Indonesia.",
+      "Didukung oleh mitra pembayaran dan penyedia pembiayaan berlisensi resmi untuk memastikan kenyamanan kedua belah pihak.",
   },
 ];
 
@@ -129,7 +129,7 @@ export default function SecuritySection() {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-title">Pake Dulu</h3>
-                <p className="text-xs text-body">Pembiayaan Berizin OJK</p>
+                <p className="text-xs text-body">Sewa Sekarang, Bayar Nanti</p>
               </div>
             </div>
 

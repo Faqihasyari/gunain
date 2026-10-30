@@ -25,7 +25,7 @@ const categories = [
 const trustBadges = [
   { icon: ShieldCheck, text: "Rekening Bersama Penjamin" },
   { icon: UserCheck, text: "Verifikasi Identitas Resmi" },
-  { icon: CreditCard, text: "Pilihan Cicilan Terdaftar OJK" },
+  { icon: CreditCard, text: "Sewa Sekarang, Bayar Nanti" },
 ];
 
 export default function HeroSection() {
