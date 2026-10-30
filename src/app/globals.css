@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #59DE59;
+  --color-primary-deep: #12B312;
+  --color-primary-dark: #0D820D;
+  --color-primary-soft: #B3F2B3;
+  --color-primary-subtle: #E8FDE8;
+
+  --color-accent: #F26022;
+  --color-accent-hover: #D94E14;
+  --color-accent-soft: #FDECE5;
+
+  --color-surface: #FAFAFA;
+  --color-surface-card: #FFFFFF;
+  --color-surface-border: #E5E7EB;
+
+  --color-title: #0F172A;
+  --color-body: #475569;
+  --color-muted: #94A3B8;
+
+  --font-sans: var(--font-plus-jakarta), "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ── Base ──────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Focus ring ──────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--color-primary-deep);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Slider thumb ────────────────────────────── */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: var(--color-primary-soft);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary-deep);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 6px rgba(18, 179, 18, 0.35);
+  cursor: grab;
+  transition: transform 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary-deep);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 6px rgba(18, 179, 18, 0.35);
+  cursor: grab;
+}
+
+/* ── Selection ───────────────────────────────── */
+::selection {
+  background-color: var(--color-primary-soft);
+  color: var(--color-title);
+}
