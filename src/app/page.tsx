@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import InteractiveDecisionSection from "@/components/InteractiveDecisionSection";
 import PillarSection from "@/components/PillarSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import CuanCalculator from "@/components/CuanCalculator";
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <InteractiveDecisionSection />
         <PillarSection />
         <HowItWorksSection />
         <CuanCalculator />
